@@ -1,16 +1,14 @@
-const root = document.getElementById("root");
+const heading1 = React.createElement("h1", { id: "title1" }, "Hello World");
+const heading2 = React.createElement(
+  "h2",
+  { className: "tittle2" },
+  "Hello React"
+);
 
-const container = document.createElement("div");
-const heading1 = document.createElement("h1");
-const heading2 = document.createElement("h2");
+const container = React.createElement("div", { id: "container" }, [
+  heading1,
+  heading2,
+]);
 
-heading1.innerHTML = "Hello World";
-heading2.innerHTML = "Hello React";
-
-heading1.setAttribute("id", "title1");
-heading2.setAttribute("class", "title2");
-container.setAttribute("id", "container");
-
-root.appendChild(container);
-container.appendChild(heading1);
-container.appendChild(heading2);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(container);
