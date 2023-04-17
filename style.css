@@ -1,3 +1,26 @@
-#container {
-  background-color: skyblue;
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 10px;
+}
+.nav-items > ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav-items > ul > li {
+  padding: 10px;
+}
+.body {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.restarent-card {
+  border: 1px solid black;
+  width: 200px;
+  padding: 10px;
+}
+.restarent-card > img {
+  width: 100%;
 }
